@@ -1,0 +1,12 @@
+footer.container {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  span {
+    font-size: 0.75rem;
+  }
+}

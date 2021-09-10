@@ -1,0 +1,32 @@
+div.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  div.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 29rem;
+    padding: 3rem;
+
+    button {
+      outline: none;
+      background-color: #4196d0;
+      border: none;
+      height: 3.5rem;
+      width: 15rem;
+      padding: 0 2rem;
+      border-radius: 2.5rem;
+      margin: 1rem 0;
+
+      span {
+        font-style: bold;
+        font-weight: 800;
+        font-size: 1.05rem;
+        letter-spacing: -0.05rem;
+      }
+    }
+  }
+}
