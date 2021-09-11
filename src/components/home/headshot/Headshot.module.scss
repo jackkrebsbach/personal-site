@@ -1,5 +1,7 @@
+@import "../../../styles/variables.scss";
+
 div.headshot__container {
-  width: 15rem;
+  width: 18rem;
   height: auto;
   border-radius: 25%;
 
@@ -7,5 +9,12 @@ div.headshot__container {
     border-radius: 25%;
     width: 100%;
     height: auto;
+  }
+
+  @media (max-width: $largeDesktop) {
+    width: 15rem;
+  }
+  @media (max-width: $smallDesktop) {
+    width: 12rem;
   }
 }

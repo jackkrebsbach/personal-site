@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
-import { Content } from "../components/home/content/Content";
 import Layout from "../components/reusables/layout/Layout";
 
-const Home: NextPage = () => {
+const contact: NextPage = () => {
   return (
     <Layout>
-      <Content />
+      <h1> my contact </h1>
     </Layout>
   );
 };
 
-export default Home;
+export default contact;

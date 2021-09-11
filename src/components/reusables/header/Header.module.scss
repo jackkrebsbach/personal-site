@@ -1,11 +1,9 @@
+@import "../../../styles/variables.scss";
 header.container {
-  padding: 2rem;
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding: 0rem 4rem;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 
   div.blurb {
     h1 {
@@ -13,7 +11,20 @@ header.container {
       margin: 0;
     }
     span {
-      color: #8a95a5;
+      color: $grey;
+    }
+    &:hover {
+      a {
+        color: $secondary;
+      }
+    }
+  }
+
+  nav {
+    align-self: center;
+    a {
+      padding: 0.15rem;
+      margin: 0.25rem;
     }
   }
 }

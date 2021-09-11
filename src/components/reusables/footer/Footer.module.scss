@@ -1,12 +1,22 @@
+@import "../../../styles/variables.scss";
 footer.container {
-  position: absolute;
-  bottom: 0;
-  padding: 2rem;
+  padding: 0rem 4rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 
   span {
     font-size: 0.75rem;
+    color: $grey;
+  }
+
+  div.links {
+    a {
+      padding: 1rem;
+      color: $grey;
+    }
+    a:hover {
+      color: $secondary;
+    }
   }
 }
