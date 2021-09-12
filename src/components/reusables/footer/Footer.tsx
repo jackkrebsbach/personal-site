@@ -5,7 +5,7 @@ import styles from "./Footer.module.scss";
 export const Footer: FC = () => {
   return (
     <footer className={styles.container}>
-      <span> COPYRIGHT © 2021 JACK KREBSBACH</span>
+      <span>  © 2021 JACK KREBSBACH</span>
       <div className={styles.links}>
         <a href="https://github.com/jackkrebsbach" target="_blank">
           <i className="fab fa-github" />

@@ -1,5 +1,5 @@
 @import "../../../styles/variables.scss";
 
 .active {
-  color: $secondary;
+  border-bottom: 2px solid $secondary;
 }

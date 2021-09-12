@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import Head from "next/head";
 import { Footer } from "../footer/Footer";
 import { Header } from "../header/Header";
 

@@ -15,7 +15,12 @@ export const Header = ({ title }: HeaderProps) => {
         <meta name="description" content="Portfolio for Jack Krebsbach" />
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="utf-8" />
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>
+        <link
+          rel="stylesheet"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossOrigin="anonymous"
+        />
       </Head>
       <div className={styles.blurb}>
         <Link href="/">
@@ -23,7 +28,7 @@ export const Header = ({ title }: HeaderProps) => {
             <h1> Jack Krebsbach </h1>
           </a>
         </Link>
-        <span> Data Science • Web Development </span>
+        <span> Data Science | Web Development </span>
       </div>
       <nav>
         <NavLink href="/projects">
@@ -36,6 +41,7 @@ export const Header = ({ title }: HeaderProps) => {
           <a>Contact</a>
         </NavLink>
       </nav>
+      
     </header>
   );
 };
