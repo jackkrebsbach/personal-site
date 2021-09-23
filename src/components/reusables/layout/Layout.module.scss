@@ -1,0 +1,14 @@
+@import "../../../styles/variables.scss";
+div.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $mobileWidth) {
+    flex-direction: row;
+    justify-content: center;
+    margin: 5rem 3rem;
+  }
+}

@@ -1,30 +1,82 @@
 @import "../../../styles/variables.scss";
 header.container {
-  padding: 0rem 4rem;
   width: 100%;
+  max-height: 5rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  padding: 2rem 1rem;
+  max-width: 75rem;
 
-  div.blurb {
-    h1 {
-      padding: 0;
+  @media (min-width: $mobileWidth) {
+    padding: 3rem 5rem;
+  }
+
+  div.info__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    div.blurb {
+      h1 {
+        padding: 0;
+        margin: 0;
+
+        font-size: 1.5rem;
+        @media (min-width: $mobileWidth) {
+          font-size: 2rem;
+        }
+      }
+      span {
+        color: $grey;
+        font-size: 0.72rem;
+        @media (min-width: $mobileWidth) {
+          font-size: 1rem;
+        }
+      }
+
+      &:hover {
+        a {
+          color: $secondary;
+        }
+      }
+    }
+
+    button.toggle {
       margin: 0;
-    }
-    span {
-      color: $grey;
-    }
-    &:hover {
-      a {
-        color: $secondary;
+      padding: 0;
+      border: 0;
+      background-color: $primary;
+
+      i {
+        background-color: $grey;
+      }
+      @media (min-width: $mobileWidth) {
+        display: none;
       }
     }
   }
 
-  nav {
+  nav.container {
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    opacity: 100%;
+    @media (min-width: $mobileWidth) {
+      flex-direction: row;
+      position: relative;
+      top: -2.5rem;
+    }
     a {
       padding: 0.15rem;
       margin: 0.25rem;
+      transition: opacity 1.5s cubic-bezier();
+    }
+    &.hidden {
+      opacity: 0%;
+      @media (min-width: $mobileWidth) {
+        opacity: 100%;
+      }
     }
   }
 }

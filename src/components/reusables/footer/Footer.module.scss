@@ -1,13 +1,20 @@
 @import "../../../styles/variables.scss";
 footer.container {
-  padding: 0rem 4rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 2rem 1rem;
+  max-width: 75rem;
 
+  @media(min-width: $mobileWidth){
+    padding: 3rem 5rem;
+  }
   span {
     font-size: 0.75rem;
     color: $grey;
+    @media(min-width: $mobileWidth){
+      font-size: 0.85rem;
+    }
   }
 
   div.links {

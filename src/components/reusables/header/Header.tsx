@@ -1,13 +1,21 @@
 import Link from "next/dist/client/link";
 import { NavLink } from "../navlink/NavLink";
+import { useState } from "react";
 import Head from "next/head";
 import styles from "./Header.module.scss";
+import cn from "classnames";
 
 type HeaderProps = {
   title?: string;
 };
 
 export const Header = ({ title }: HeaderProps) => {
+  const [notOpen, setNotOpen] = useState(true);
+
+  function handleClick(event: any) {
+    event.preventDefault();
+    setNotOpen(!notOpen);
+  }
   return (
     <header className={styles.container}>
       <Head>
@@ -22,15 +30,24 @@ export const Header = ({ title }: HeaderProps) => {
           crossOrigin="anonymous"
         />
       </Head>
-      <div className={styles.blurb}>
-        <Link href="/">
-          <a>
-            <h1> Jack Krebsbach </h1>
-          </a>
-        </Link>
-        <span> Data Science | Web Development </span>
+      <div className={styles.info__container}>
+        <div className={styles.blurb}>
+          <Link href="/">
+            <a>
+              <h1> Jack Krebsbach </h1>
+            </a>
+          </Link>
+          <span> Data Science </span>
+          <span className={styles.seperator}> | </span>
+          <span> Web Development </span>
+        </div>
+        <button className={styles.toggle} onClick={handleClick}>
+          <i className="fas fa-bars"></i>
+        </button>
       </div>
-      <nav>
+      <nav
+        className={cn({ [styles.container]: true, [styles.hidden]: notOpen })}
+      >
         <NavLink href="/projects">
           <a>Projects</a>
         </NavLink>
@@ -41,7 +58,6 @@ export const Header = ({ title }: HeaderProps) => {
           <a>Contact</a>
         </NavLink>
       </nav>
-      
     </header>
   );
 };

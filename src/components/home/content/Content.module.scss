@@ -5,25 +5,29 @@ div.container {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
-  @media (max-width: $mobileWidth) {
-    flex-direction: column;
-    margin: 2rem 0;
-  }
+  padding: 0 1rem;
 
   div.description {
     display: flex;
     flex-direction: column;
-    width: 36rem;
-    padding: 3rem;
+    width: 100%;
+    @media (min-width: $mobileWidth) {
+      width: 25rem;
+    }
 
     div.title__container {
       justify-self: flex-start;
       align-self: left;
+      h2 {
+        font-size: 1.45rem;
+        @media (min-width: $mobileWidth) {
+          font-size: 1.65rem;
+        }
+      }
     }
 
     span {
-      font-size: 1.05rem;
+      font-size: 1rem;
       line-height: 1.55;
     }
 
@@ -35,7 +39,7 @@ div.container {
       width: 15rem;
       padding: 0 2rem;
       border-radius: 2.5rem;
-      margin: 1rem 0;
+      margin: 2rem 0;
       align-self: center;
 
       span {
@@ -43,6 +47,7 @@ div.container {
         font-style: bold;
         font-weight: 800;
         font-size: 1.05rem;
+        padding: 0;
         letter-spacing: -0.05rem;
       }
     }

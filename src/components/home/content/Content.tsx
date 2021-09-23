@@ -5,7 +5,6 @@ import styles from "./Content.module.scss";
 export const Content: FC = () => {
   return (
     <div className={styles.container}>
-      <Headshot />
       <div className={styles.description}>
         <div className={styles.title__container}>
           <h2> Welcome, my name is Jack! </h2>
