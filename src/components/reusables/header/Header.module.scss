@@ -21,14 +21,14 @@ header.container {
         padding: 0;
         margin: 0;
 
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         @media (min-width: $mobileWidth) {
           font-size: 2rem;
         }
       }
       span {
         color: $grey;
-        font-size: 0.72rem;
+        font-size: 0.85rem;
         @media (min-width: $mobileWidth) {
           font-size: 1rem;
         }
@@ -48,7 +48,7 @@ header.container {
       background-color: $primary;
 
       i {
-        background-color: $grey;
+        color: $grey;
       }
       @media (min-width: $mobileWidth) {
         display: none;

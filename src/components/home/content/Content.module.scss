@@ -19,9 +19,9 @@ div.container {
       justify-self: flex-start;
       align-self: left;
       h2 {
-        font-size: 1.45rem;
+        font-size: 1.65em;
         @media (min-width: $mobileWidth) {
-          font-size: 1.65rem;
+          font-size: 1.75rem;
         }
       }
     }
