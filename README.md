@@ -1,2 +1,2 @@
 # Jack Krebsbach
-Built with Next.js, Sass, and Typescript
+Portfolio website built with Next.js, Sass, and Typescript
