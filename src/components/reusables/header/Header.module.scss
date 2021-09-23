@@ -47,8 +47,9 @@ header.container {
       border: 0;
       background-color: $primary;
 
-      i {
+      i.bars {
         color: $grey;
+        font-size: 1.2rem;
       }
       @media (min-width: $mobileWidth) {
         display: none;

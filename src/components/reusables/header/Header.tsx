@@ -42,7 +42,7 @@ export const Header = ({ title }: HeaderProps) => {
           <span> Web Development </span>
         </div>
         <button className={styles.toggle} onClick={handleClick}>
-          <i className="fas fa-bars"></i>
+          <i className={cn({ [styles.bars]: true, ["fas fa-bars"]: true })}></i>
         </button>
       </div>
       <nav
