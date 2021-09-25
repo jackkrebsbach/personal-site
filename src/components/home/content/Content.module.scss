@@ -11,7 +11,7 @@ div.container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    @media (min-width: $mobileWidth) {
+    @media (min-width: $tabletWidth) {
       width: 25rem;
     }
 
@@ -20,7 +20,7 @@ div.container {
       align-self: left;
       h2 {
         font-size: 1.65em;
-        @media (min-width: $mobileWidth) {
+        @media (min-width: $tabletWidth) {
           font-size: 1.75rem;
         }
       }
