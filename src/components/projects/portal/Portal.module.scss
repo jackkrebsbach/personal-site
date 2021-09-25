@@ -1,0 +1,17 @@
+@import "../../../styles/variables.scss";
+
+div.container {
+  display: flex;
+  flex-direction: column;
+
+  div.images__container {
+    display: flex;
+    width: 20rem;
+    padding: 1rem 0;
+    .img {
+      width: 100%;
+      height: auto;
+      border-radius: 5%;
+    }
+  }
+}

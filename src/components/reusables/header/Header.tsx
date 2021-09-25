@@ -29,6 +29,10 @@ export const Header = ({ title }: HeaderProps) => {
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
           crossOrigin="anonymous"
         />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
       </Head>
       <div className={styles.info__container}>
         <div className={styles.blurb}>
@@ -51,8 +55,8 @@ export const Header = ({ title }: HeaderProps) => {
         <NavLink href="/projects">
           <a>Projects</a>
         </NavLink>
-        <NavLink href="/resume">
-          <a>Resume</a>
+        <NavLink href="/resume.pdf">
+          <a target="_blank">Resume</a>
         </NavLink>
         <NavLink href="/contact">
           <a>Contact</a>

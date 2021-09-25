@@ -1,0 +1,43 @@
+@import "./variables.scss";
+
+form.contact__container {
+  width: 100%;
+  padding: 0 0.5rem;
+  margin: 3rem 0;
+  @media (min-width: $mobileWidth) {
+    width: 30rem;
+    margin: 0 0;
+  }
+  div.input__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media (min-width: $mobileWidth) {
+      flex-direction: row;
+    }
+  }
+  button.submit__button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.2rem 2.75rem;
+    color: $primary;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    cursor: pointer;
+    transition: 100ms ease;
+    background-color: $secondary;
+    outline: transparent;
+    margin: 0.2rem 0 0 0.5rem;
+    &:hover {
+      background-color: scale-color($color: $secondary, $lightness: -30%);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}

@@ -63,6 +63,7 @@ header.container {
     flex-direction: column;
     align-self: flex-end;
     opacity: 100%;
+    z-index: 100;
     @media (min-width: $mobileWidth) {
       flex-direction: row;
       position: relative;
