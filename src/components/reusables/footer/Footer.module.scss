@@ -6,13 +6,13 @@ footer.container {
   padding: 2rem 1rem;
   max-width: 75rem;
 
-  @media(min-width: $mobileWidth){
+  @media (min-width: $tabletWidth) {
     padding: 3rem 5rem;
   }
   span {
     font-size: 0.75rem;
     color: $grey;
-    @media(min-width: $mobileWidth){
+    @media (min-width: $tabletWidth) {
       font-size: 0.85rem;
     }
   }
