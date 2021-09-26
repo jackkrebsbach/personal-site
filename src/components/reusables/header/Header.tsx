@@ -4,6 +4,7 @@ import { useState } from "react";
 import Head from "next/head";
 import styles from "./Header.module.scss";
 import cn from "classnames";
+import { useRouter } from "next/router";
 
 type HeaderProps = {
   title?: string;
@@ -11,6 +12,7 @@ type HeaderProps = {
 
 export const Header = ({ title }: HeaderProps) => {
   const [notOpen, setNotOpen] = useState(true);
+  const router = useRouter();
 
   function handleClick(event: any) {
     event.preventDefault();
@@ -52,6 +54,11 @@ export const Header = ({ title }: HeaderProps) => {
       <nav
         className={cn({ [styles.container]: true, [styles.hidden]: notOpen })}
       >
+        {router.asPath !== "/" && (
+          <NavLink href="/">
+            <a>Home</a>
+          </NavLink>
+        )}
         <NavLink href="/projects">
           <a>Projects</a>
         </NavLink>

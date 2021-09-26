@@ -3,9 +3,18 @@
 form.contact__container {
   width: 100%;
   padding: 0 0.5rem;
-  margin: 3rem 0;
-  @media (min-width: $mobileWidth) {
-    width: 30rem;
+  margin: 2rem 0;
+
+  @media (min-width: $tabletWidth) {
+    width: 40rem;
+    margin: 0 0;
+  }
+  @media (min-width: $smallDesktop) {
+    width: 50rem;
+    margin: 0 0;
+  }
+  @media (min-width: $largeDesktop) {
+    width: 60rem;
     margin: 0 0;
   }
   div.input__container {
@@ -29,7 +38,10 @@ form.contact__container {
     transition: 100ms ease;
     background-color: $secondary;
     outline: transparent;
-    margin: 0.2rem 0 0 0.5rem;
+    margin: 0.5rem 0 0rem 0.5rem;
+    @media (min-width: $largeDesktop) {
+      margin: 1.2rem 0 0rem 0.5rem;
+    }
     &:hover {
       background-color: scale-color($color: $secondary, $lightness: -30%);
     }

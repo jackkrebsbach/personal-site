@@ -1,20 +1,27 @@
-import { ImageComparator } from "../components/reusables/image-comparator/ImageComparator";
 import Layout from "../components/reusables/layout/Layout";
 import styles from "../styles/Projects.module.scss";
 
 export default function projects() {
+  function handleClick(e: any) {
+    e.preventDefault();
+    window.open(`/projects/${e.target.id}.pdf`, "_blank");
+  }
   return (
     <Layout>
       <div className={styles.container}>
-        <span> Web Development </span>
-        <span> Data Science </span>
-        <ImageComparator
-          topImage="/projects/r.png"
-          bottomImage="/projects/research.png"
-          width={300}
-          height={100}
-          vertical={false}
-        />
+        <div className={styles.header__wrapper}>
+          <h2> Web Development </h2>
+        </div>
+
+        <button id="software" onClick={handleClick}>
+          <span>ENTER</span>
+        </button>
+        <div className={styles.header__wrapper}>
+          <h2> Data Science </h2>
+        </div>
+        <button id="data-science" onClick={handleClick}>
+          <span>ENTER</span>
+        </button>
       </div>
     </Layout>
   );

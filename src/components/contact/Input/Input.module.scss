@@ -25,14 +25,16 @@ div.container {
     outline: none;
     width: 100%;
     font-weight: 500;
-    letter-spacing: 0.05rem;
     font-size: 0.8rem;
     margin-bottom: 0.2rem;
   }
 
   textarea {
-    height: 15rem;
+    height: 10rem;
     max-width: 100%;
-    letter-spacing: 0rem;
+    font-family: inherit;
+    @media (min-width: $tabletWidth) {
+      height: 8rem;
+    }
   }
 }

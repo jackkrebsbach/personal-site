@@ -44,24 +44,24 @@ const Contact: NextPage = () => {
         email,
         name,
         company,
-        message: message,
+        message,
       })) as { success: boolean };
       setSendingMail(false);
       if (res.success) {
-        alert("messageSent");
+        alert("Message sent!");
       } else if (!res.success) {
-        alert("unableToSendMessage");
+        alert("Unable to send message.");
       }
     } catch (error) {
       setSendingMail(false);
-      alert("unableToSendMessage");
+      alert("Unable to send message.");
     }
   };
 
   return (
     <Layout>
       <form className={styles.contact__container} onSubmit={sendContactMail}>
-        <h2> Send a Message!</h2>
+        <h2> Send me a Message!</h2>
         <div className={styles.input__container}>
           <Input name="Name" value={name} setValue={setName} />
           <Input name="Company" value={company} setValue={setCompany} />

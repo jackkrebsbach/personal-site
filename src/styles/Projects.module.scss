@@ -4,4 +4,38 @@ div.container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0 0.5rem;
+
+  div.header__wrapper {
+    display: flex;
+
+    h2 {
+      justify-self: flex-start;
+      align-self: flex-start;
+      margin: 0;
+    }
+  }
+
+  button {
+    outline: none;
+    background-color: $secondary;
+    border: none;
+    height: 3.5rem;
+    width: 13rem;
+    padding: 0 2rem;
+    border-radius: 2.5rem;
+    margin: 0.25rem 0 2rem 0;
+    align-self: center;
+
+    span {
+      color: black;
+      font-style: bold;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 0;
+      letter-spacing: -0.05rem;
+    }
+  }
 }
