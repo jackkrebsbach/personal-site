@@ -60,6 +60,7 @@ export default async (req: any, res: any) => {
     await sendEmail(email, name, company, message);
     res.status(200).json({ success: true });
   } catch (error) {
+    console.log(error);
     res.status(400).json({ success: false });
   }
 };
