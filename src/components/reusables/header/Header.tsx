@@ -54,11 +54,9 @@ export const Header = ({ title }: HeaderProps) => {
       <nav
         className={cn({ [styles.container]: true, [styles.hidden]: notOpen })}
       >
-        {router.asPath !== "/" && (
-          <NavLink href="/">
-            <a>Home</a>
-          </NavLink>
-        )}
+        <NavLink href="/">
+          <a>Home</a>
+        </NavLink>
         <NavLink href="/projects">
           <a>Projects</a>
         </NavLink>

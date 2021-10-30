@@ -1,4 +1,3 @@
-import Layout from "../components/reusables/layout/Layout";
 import styles from "../styles/Projects.module.scss";
 
 export default function projects() {
@@ -11,22 +10,20 @@ export default function projects() {
     window.open("/projects/data-science.pdf", "_blank");
   }
   return (
-    <Layout>
-      <div className={styles.container}>
-        <div className={styles.header__wrapper}>
-          <h2> Web Development </h2>
-        </div>
-
-        <button id="software" onClick={handleSoftwareClick}>
-          <span>ENTER</span>
-        </button>
-        <div className={styles.header__wrapper}>
-          <h2> Data Science </h2>
-        </div>
-        <button id="data-science" onClick={handleDataClick}>
-          <span>ENTER</span>
-        </button>
+    <div className={styles.container}>
+      <div className={styles.header__wrapper}>
+        <h2> Web Development </h2>
       </div>
-    </Layout>
+
+      <button id="software" onClick={handleSoftwareClick}>
+        <span>ENTER</span>
+      </button>
+      <div className={styles.header__wrapper}>
+        <h2> Data Science </h2>
+      </div>
+      <button id="data-science" onClick={handleDataClick}>
+        <span>ENTER</span>
+      </button>
+    </div>
   );
 }

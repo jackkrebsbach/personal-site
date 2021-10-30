@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import { Input } from "../components/contact/Input/Input";
-import Layout from "../components/reusables/layout/Layout";
 import styles from "../styles/Contact.module.scss";
 
 const Contact: NextPage = () => {
@@ -59,34 +58,31 @@ const Contact: NextPage = () => {
   };
 
   return (
-    <Layout>
-      <form className={styles.contact__container} onSubmit={sendContactMail}>
-        <h2> Send me a Message!</h2>
-        <div className={styles.input__container}>
-          <Input name="Name" value={name} setValue={setName} />
-          <Input name="Company" value={company} setValue={setCompany} />
-        </div>
-        <div className={styles.input__container}>
-          <Input name="Email" value={email} setValue={setEmail} />
-        </div>
-        <div className={styles.input__container}>
-          <Input
-            textarea={true}
-            name="Message"
-            value={message}
-            setValue={setMessage}
-          />
-        </div>
-        <button
-          disabled={sendingMail}
-          type="submit"
-          className={styles.submit__button}
-        >
-          {sendingMail ? "sending.." : "SEND MESSAGE"}
-        </button>
-      </form>
-    </Layout>
-  );
+    <form className={styles.contact__container} onSubmit={sendContactMail}>
+      <h2> Send me a Message!</h2>
+      <div className={styles.input__container}>
+        <Input name="Name" value={name} setValue={setName} />
+        <Input name="Company" value={company} setValue={setCompany} />
+      </div>
+      <div className={styles.input__container}>
+        <Input name="Email" value={email} setValue={setEmail} />
+      </div>
+      <div className={styles.input__container}>
+        <Input
+          textarea={true}
+          name="Message"
+          value={message}
+          setValue={setMessage}
+        />
+      </div>
+      <button
+        disabled={sendingMail}
+        type="submit"
+        className={styles.submit__button}
+      >
+        {sendingMail ? "sending.." : "SEND MESSAGE"}
+      </button>
+    </form>);
 };
 
 export default Contact;

@@ -9,8 +9,9 @@ export const Headshot: FC = () => {
       <Image
         src={img}
         alt="headshot"
-        className={styles.headshot}
         placeholder="blur"
+        className={styles.headshot}
+        priority
       />
     </div>
   );
