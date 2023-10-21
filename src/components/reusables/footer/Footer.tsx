@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-no-target-blank */
-import { FC } from "react";
+import { FC, useState } from "react";
 import styles from "./Footer.module.scss";
 
 export const Footer: FC = () => {
+  const [d, _] = useState<number>(new Date().getFullYear());
   return (
     <footer className={styles.container}>
-      <span>  © 2021 JACK KREBSBACH</span>
+      <span> © {d} JACK KREBSBACH</span>
       <div className={styles.links}>
         <a href="https://github.com/jackkrebsbach" target="_blank">
           <i className="fab fa-github" />

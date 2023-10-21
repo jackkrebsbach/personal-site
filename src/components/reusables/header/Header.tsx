@@ -39,13 +39,11 @@ export const Header = ({ title }: HeaderProps) => {
       <div className={styles.info__container}>
         <div className={styles.blurb}>
           <Link href="/">
-            <a>
-              <h1> Jack Krebsbach </h1>
-            </a>
+            <h1> Jack Krebsbach </h1>
           </Link>
           <span> Data Science </span>
           <span className={styles.seperator}> | </span>
-          <span> Web Development </span>
+          <span> Software Development </span>
         </div>
         <button className={styles.toggle} onClick={handleClick}>
           <i className={cn({ [styles.bars]: true, ["fas fa-bars"]: true })}></i>
@@ -55,16 +53,13 @@ export const Header = ({ title }: HeaderProps) => {
         className={cn({ [styles.container]: true, [styles.hidden]: notOpen })}
       >
         <NavLink href="/">
-          <a>Home</a>
-        </NavLink>
-        <NavLink href="/projects">
-          <a>Projects</a>
+          <span>Home</span>
         </NavLink>
         <NavLink href="/resume.pdf">
-          <a target="_blank">Resume</a>
+          <span>Resume</span>
         </NavLink>
         <NavLink href="/contact">
-          <a>Contact</a>
+          <span>Contact</span>
         </NavLink>
       </nav>
     </header>

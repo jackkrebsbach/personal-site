@@ -82,7 +82,8 @@ const Contact: NextPage = () => {
       >
         {sendingMail ? "sending.." : "SEND MESSAGE"}
       </button>
-    </form>);
+    </form>
+  );
 };
 
 export default Contact;

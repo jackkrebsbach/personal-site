@@ -6,10 +6,12 @@ const sendEmail = async (
   email: string,
   name: string,
   company: string,
-  message: string
+  message: string,
 ) => {
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASSWORD,
@@ -50,7 +52,9 @@ const sendEmail = async (
     to: email,
     subject: "Jack Krebsbach: Contact successful!",
     text: `Thanks for your message! I will get back to you shortly.`,
-    html: `<p>Thanks for your message! I will get back to you shortly.</p>`,
+    html: `<p>Thanks for your message! I will get back to you shortly.</p>
+            <p> -Jack</p>
+      `,
   });
 };
 
