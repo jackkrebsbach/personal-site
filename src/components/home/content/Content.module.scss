@@ -33,6 +33,7 @@ div.container {
 
     button {
       outline: none;
+      cursor: pointer;
       background-color: $secondary;
       border: none;
       height: 3.5rem;
@@ -49,6 +50,13 @@ div.container {
         font-size: 1.05rem;
         padding: 0;
         letter-spacing: -0.05rem;
+      }
+    }
+
+    @media (hover: hover) {
+      button:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
       }
     }
   }
