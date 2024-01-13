@@ -61,6 +61,9 @@ export const Header = ({ title }: HeaderProps) => {
         <NavLink href="/contact">
           <span>Contact</span>
         </NavLink>
+        <NavLink href="/portfolio">
+          <span>Portfolio</span>
+        </NavLink>
       </nav>
     </header>
   );
