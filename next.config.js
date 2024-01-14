@@ -5,7 +5,7 @@ module.exports = {
     return [
       {
         source: "/portfolio",
-        destination: "/index.html",
+        destination: "/index.pdf",
       },
     ];
   },
