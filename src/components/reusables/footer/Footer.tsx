@@ -7,16 +7,22 @@ export const Footer: FC = () => {
   const [d, _] = useState<number>(new Date().getFullYear());
   return (
     <footer className={styles.container}>
-      <span> © {d} JACK KREBSBACH</span>
-      <span>
-        Looking for My CV? Click{" "}
-        <span className={styles.underline}>
-          <Link href="/cv.pdf" target="_blank">
-            {" "}
-            Here
-          </Link>
-        </span>
-      </span>
+      <div className={styles.cv}>
+        <span> © {d} </span>
+        <span>JACK KREBSBACH</span>
+      </div>
+      <div className={styles.cv}>
+        <span>Looking for My CV? </span>
+        <div>
+          <span>Click </span>
+          <span className={styles.underline}>
+            <Link href="/cv.pdf" target="_blank">
+              {" "}
+              Here
+            </Link>
+          </span>
+        </div>
+      </div>
       <div className={styles.links}>
         <a href="https://github.com/jackkrebsbach" target="_blank">
           <i className="fab fa-github" />

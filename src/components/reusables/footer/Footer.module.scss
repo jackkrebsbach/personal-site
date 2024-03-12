@@ -11,6 +11,11 @@ footer.container {
     padding: 3rem 5rem;
   }
 
+  .cv {
+    display: flex;
+    flex-direction: column;
+  }
+
   span {
     font-size: 0.65rem;
     color: $grey;
@@ -21,8 +26,11 @@ footer.container {
   }
 
   div.links {
+    display: flex;
+    flex-direction: row;
+
     a {
-      padding: 1rem;
+      padding: 0.5rem;
       color: $grey;
     }
 
